@@ -23,11 +23,9 @@ int _printf(const char *format, ...);
 unsigned int bufferHandler(char *buf, char c, unsigned int bufIndex);
 int bufferPrint(char *buf, unsigned int nbuf);
 int countPrintFunc(const char *s, int index);
-<<<<<<< HEAD
 int printChar(va_list arguments, char *buf, unsigned int bufIndex);
-=======
 int (*getPrintFunc(const char *s, int index))(va_list, char *, unsigned int);
+int printPrg(va_list __attribute__((unused)), char *, unsigned int);
 
->>>>>>> 6c620e9bbdafc805e4c273fc9747c983879617a5
 #endif
 
