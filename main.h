@@ -27,6 +27,7 @@ int printChar(va_list arguments, char *buf, unsigned int bufIndex);
 int (*getPrintFunc(const char *s, int index))(va_list, char *, unsigned int);
 int printPrg(va_list __attribute__((unused)), char *, unsigned int);
 int printStr(va_list arguments, char *buf, unsigned int bufIndex);
+int printInt(va_list arguments, char *buf, unsigned int bufIndex);
 
 #endif
 
