@@ -9,7 +9,8 @@ int countPrintFunc(const char *s, int index)
 {
 	pStruct ps[] = {
 	{"c", printChar}, {"s", printStr},
-	{"%", printPrg}, {NULL, NULL},
+	{"%", printPrg}, {"i", printInt},
+	{"d", printInt}, {NULL, NULL},
 	};
 	int i = 0, j = 0, indexHolder;
 
