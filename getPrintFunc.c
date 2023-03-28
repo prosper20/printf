@@ -1,16 +1,17 @@
 #include "main.h"
 /**
- * countPrintFunc - returns the amount of identifiers.
+ * getPrintFunc - selects the correct function to perform the operation.
  * @s: argument indentifier
- * @index: index of argument identifier.
- * Return: amount of identifiers.
+ * @index: index for argument indentifier
+ * Return: pointer to a function.
  */
-int countPrintFunc(const char *s, int index)
+int (*getPrintFunc(const char *s, int index))(va_list, char *, unsigned int)
 {
 	pStruct ps[] = {
-	{"c", printChar}, {"s", printStr},
-	{"%", printPrg}, {NULL, NULL},
+		{"c", printChar}, {"s", printStr},
+		{"%", printPrg}, {NULL, NULL},
 	};
+
 	int i = 0, j = 0, indexHolder;
 
 	indexHolder = index;
@@ -30,5 +31,6 @@ int countPrintFunc(const char *s, int index)
 			index = indexHolder;
 		}
 	}
-	return (j);
+	return (ps[i].func);
 }
+
