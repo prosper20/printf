@@ -21,6 +21,7 @@ typedef struct print
 
 int _printf(const char *format, ...);
 unsigned int bufferHandler(char *buf, char c, unsigned int bufIndex);
+int bufferPrint(char *buf, unsigned int nbuf);
 
 #endif
 
