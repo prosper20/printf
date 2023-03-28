@@ -9,7 +9,8 @@ int (*getPrintFunc(const char *s, int index))(va_list, char *, unsigned int)
 {
 	pStruct ps[] = {
 		{"c", printChar}, {"s", printStr},
-		{"%", printPrg}, {NULL, NULL},
+		{"%", printPrg}, {"i", printInt},
+		{"d", printInt}, {NULL, NULL},
 	};
 
 	int i = 0, j = 0, indexHolder;
@@ -33,4 +34,3 @@ int (*getPrintFunc(const char *s, int index))(va_list, char *, unsigned int)
 	}
 	return (ps[i].func);
 }
-
