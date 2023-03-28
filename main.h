@@ -20,6 +20,7 @@ typedef struct print
 } pStruct;
 
 int _printf(const char *format, ...);
+unsigned int bufferHandler(char *buf, char c, unsigned int bufIndex);
 
 #endif
 
